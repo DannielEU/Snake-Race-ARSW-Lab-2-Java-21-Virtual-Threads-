@@ -153,7 +153,7 @@ Este laboratorio es una adaptación modernizada del ejercicio **SnakeRace** de A
 
 **REPORTE DEL LABORATORIO (Respuestas y cambios realizados)**
 
-Resumen de alcance: se implementaron correcciones de concurrencia y una mejora en la UI para mostrar estadísticas al pausar. Se omitió la Parte I (PrimeFinder) tal como solicitaste — no se realizó la búsqueda de primos aquí.
+Resumen de alcance: se implementaron correcciones de concurrencia y una mejora en la UI para mostrar estadísticas al pausar.
 
 1) Análisis de concurrencia
 - Cómo se usan hilos: cada serpiente corre en su propio task (virtual thread) mediante `Executors.newVirtualThreadPerTaskExecutor()` y la lógica de avance está en `SnakeRunner`.
@@ -197,5 +197,3 @@ mvn -q -DskipTests exec:java -Dsnakes=20
 7) Resumen de archivos modificados
 - `src/main/java/co/eci/snake/core/Snake.java`: sincronización mínima de `turn`, `head`, `snapshot`, `advance`.
 - `src/main/java/co/eci/snake/ui/legacy/SnakeApp.java`: al pausar se calculan y muestran estadísticas consistentes basadas en snapshots.
-
-Si quieres que implemente la mecánica de muerte o que modifique la definición de "peor serpiente" para ajustarla a otro criterio, dime y lo hago a continuación.
