@@ -198,7 +198,4 @@ mvn -q -DskipTests exec:java -Dsnakes=20
 - `src/main/java/co/eci/snake/core/Snake.java`: sincronización mínima de `turn`, `head`, `snapshot`, `advance`.
 - `src/main/java/co/eci/snake/ui/legacy/SnakeApp.java`: al pausar se calculan y muestran estadísticas consistentes basadas en snapshots.
 
-8) Observaciones finales y mejoras futuras
-- Si deseas un comportamiento de muerte/abandono real (serpientes que mueren al chocar), puedo implementarlo añadiendo una estructura global de ocupación de celdas o extendiendo `Board` para conocer todas las serpientes y detectar colisiones atómicas. Esto requeriría cambios adicionales en `Board` y coordinación fina entre hilos.
-
 Si quieres que implemente la mecánica de muerte o que modifique la definición de "peor serpiente" para ajustarla a otro criterio, dime y lo hago a continuación.
